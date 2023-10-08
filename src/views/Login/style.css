@@ -1,0 +1,42 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    background: #FAF9FB;
+    
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    align-items:center ;
+    justify-content: space-evenly;
+}
+
+.formulario input{
+    height: 25px;
+    border-radius: 6px;
+    border:1px solid #000;
+    width: 200px;
+    padding-left: 8px;
+}
+
+.formulario button{
+    width: 210px;
+    height: 30px;
+    background: #1e54c9;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color:white;
+}
+
+.social{
+    display: flex;
+    width: 200px;
+    align-items:center ;
+    justify-content: space-evenly;
+}
