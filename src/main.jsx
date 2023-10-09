@@ -7,6 +7,9 @@ import Header from './Components/header/Header.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+ 
+
+
   <React.StrictMode>
   <BrowserRouter>
   <Header/>

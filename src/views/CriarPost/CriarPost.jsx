@@ -48,7 +48,7 @@ function CriarPost() {
         <div className="criar-post-container">
           <h1>Criar Post</h1>
           <div className="user-info">
-            <img src={usuariophoto} alt="Foto do Usuário" />
+            <img src={usuariophoto} alt="Foto do Usuário" className="user-photo"/>
             <p>{usuario}</p>
           </div>
           <form
@@ -72,7 +72,8 @@ function CriarPost() {
               <textarea
                 value={Conteudo}
                 onChange={(e) => setConteudo(e.target.value)}
-              />
+             className="text-content"
+             />
             </div>
             {/* ... outros campos do formulário */}
             <button type="submit" className="btn-criar-post">

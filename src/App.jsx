@@ -7,6 +7,7 @@ import Login from './views/Login/Login'
 import Register from './views/Register/Register'
 import Autenticacao from './Components/Autenticacao/Autenticacao'
 import CriarPost from './views/CriarPost/CriarPost'
+import Acount from './views/Acount/Acount'
 function App() {
 
 
@@ -15,6 +16,7 @@ function App() {
      <Route path="/" element={<Home />}/>
     <Route path="/postagens" element={<Autenticacao> <Postagens /></Autenticacao>}/>
     <Route path="/criarpost" element={<Autenticacao> <CriarPost /></Autenticacao>}/>
+    <Route path="/acount" element={<Autenticacao> <Acount /></Autenticacao>}/>
     <Route path="/login" element={<Login />}/>
     <Route path="/register" element={<Register />}/>
 </Routes>

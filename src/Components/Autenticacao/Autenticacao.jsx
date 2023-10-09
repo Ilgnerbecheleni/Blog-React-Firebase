@@ -21,10 +21,10 @@ const Autenticacao = ({ children }) => {
     return () => unsubscribe();
   }, []); // Certifique-se de fornecer um array vazio para que o efeito seja executado apenas uma vez
 
-  if (usuarioAutenticado) {
-    return children;
+  if (!usuarioAutenticado) {
+ <PaginaRedirecao/>
   } else {
-    return <PaginaRedirecao/>;
+    return children;
   }
 };
 

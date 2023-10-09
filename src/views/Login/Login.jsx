@@ -71,7 +71,7 @@ event.preventDefault()
   <a href="/register">Registre-se</a>
 </div>
 <div className='social'>
-<FcGoogle size={30} onClick={logarComGoogle}/>
+<FcGoogle size={30} onClick={logarComGoogle} className='btnsocial'/>
 <AiFillGithub size={30}/>
 </div>
 

@@ -10,7 +10,7 @@
   }
   
   .criar-post-form {
-    width: 300px; /* Define a largura do formulário */
+    width:400px; /* Define a largura do formulário */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -20,6 +20,9 @@
   
   .form-group {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
   
   label {
@@ -28,13 +31,22 @@
     margin-bottom: 5px;
   }
   
-  input[type="text"],
-  textarea {
+  input[type="text"] {
     width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    
+  }
+
+  .text-content {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 150px;
   }
   
   .btn-criar-post {
@@ -45,9 +57,23 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    width: 300px;
+    text-transform: uppercase;
   }
   
   .btn-criar-post:hover {
     background-color: #0056b3; /* Cor de destaque ao passar o mouse */
+  }
+  .user-photo{
+    max-width: 50px;
+    border-radius: 100%;
+  }
+
+  .user-info{
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
   }
   
