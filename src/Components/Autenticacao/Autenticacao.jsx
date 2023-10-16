@@ -11,6 +11,7 @@ const Autenticacao = ({ children }) => {
       if (user) {
         // O usuário está autenticado, você pode executar a lógica desejada aqui
         setUsuarioAutenticado(user);
+        console.log(usuarioAutenticado);
       } else {
         // O usuário não está autenticado, você pode executar a lógica desejada aqui
         setUsuarioAutenticado(null);
@@ -21,10 +22,11 @@ const Autenticacao = ({ children }) => {
     return () => unsubscribe();
   }, []); // Certifique-se de fornecer um array vazio para que o efeito seja executado apenas uma vez
 
-  if (!usuarioAutenticado) {
- <PaginaRedirecao/>
-  } else {
+  if (usuarioAutenticado) {
     return children;
+  } else {
+    return <PaginaRedirecao/>
+    
   }
 };
 

@@ -46,6 +46,11 @@
     cursor: pointer;
 }
 
+.active{
+    color: black;
+    font-weight: 800;
+}
+
 .botao:hover{
      color: black;
 }

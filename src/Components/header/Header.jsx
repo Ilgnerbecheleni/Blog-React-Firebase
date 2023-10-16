@@ -6,6 +6,7 @@ import { auth } from '../../firebase/firebase';
 import {BiUserCircle} from 'react-icons/bi'
 
 import './style.css';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   const [usuarioAutenticado, setUsuarioAutenticado] = useState(null);
@@ -31,14 +32,14 @@ function Header() {
     <nav className='header'>
       <h1>Comenta DEV</h1>
       <ul className='menu'>
-        <li className='menu-item'><a href="/" className='menu-link botao'><AiFillHome size={20} /> Home </a></li>
+        <li className='menu-item'><NavLink to="/" className='menu-link botao' ><AiFillHome size={20} /> Home </NavLink></li>
       
         {usuarioAutenticado ? (
           <>
-            <li className='menu-item'><a href="/postagens" className='menu-link botao'><AiOutlineNotification size={20} /> Postagens</a></li>
+            <li className='menu-item'><NavLink activeClassName="active" to="/postagens" className='menu-link botao'><AiOutlineNotification size={20} /> Postagens</NavLink></li>
         
           <li className='menu-item'>
-            <a href='/acount' className='menu-link botao'><GoGear/> Acount </a>
+            <NavLink to='/acount' className='menu-link botao'><GoGear/> Acount </NavLink>
           </li>
           <li className='menu-item'><button onClick={handleLogout} className='menu-link botao' >{usuarioAutenticado.photoUrl ?  
           <img src={usuarioAutenticado.photoURL} alt="Usuário" className='user' />:
@@ -46,7 +47,7 @@ function Header() {
           } Logout</button></li>
           </>
         ) : (
-          <li className='menu-item'><a href="/login" className='menu-link'><AiOutlineLogin size={20}  /> Login</a></li>
+          <li className='menu-item'><NavLink to="/login" className='menu-link'><AiOutlineLogin size={20}  /> Login</NavLink></li>
         )}
       </ul>
     </nav>
